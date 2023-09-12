@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bookshelf Apps</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Bookshelf Apps</h1>
+    <img
+      src="https://media.istockphoto.com/id/1349688040/id/vektor/desain-logo-buku-tangan-logo-pendidikan-dengan-vektor-konsep-tangan-desain-logo-tangan-dan.jpg?s=612x612&w=0&k=20&c=9sPyyTCpqCs4eJZlwSh1RTupLBpZLyJzTXvcnY1xbRY="
+      alt="Logo"
+      class="logo"
+    />
+    <div class="container">
+      <div class="book-form">
+        <h2>Tambah Buku Baru</h2>
+
+        <form id="book-form">
+          <input type="text" id="title" placeholder="Judul Buku" required />
+          <input type="text" id="author" placeholder="Penulis" required />
+          <input type="number" id="year" placeholder="Tahun Terbit" required />
+          <label for="isComplete">Selesai Dibaca</label>
+          <input type="checkbox" id="isComplete" />
+          <button type="submit" id="add-button">Tambahkan</button>
+        </form>
+      </div>
+
+      <div class="search-bar">
+        <input type="text" id="search" placeholder="Cari Judul Buku" />
+      </div>
+
+      <div class="bookshelves">
+        <div class="shelf" id="unread-shelf">
+          <h2>Belum selesai dibaca</h2>
+          <ul id="unread-list"></ul>
+        </div>
+        <div class="shelf" id="read-shelf">
+          <h2>Selesai dibaca</h2>
+          <ul id="read-list"></ul>
+        </div>
+      </div>
+    </div>
+    <div id="modal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Detail Buku</h2>
+        <div id="book-details"></div>
+      </div>
+    </div>
+
+    <!-- Custom Dialog -->
+    <div id="customDialog" class="dialog">
+      <div class="dialog-content">
+        <p>Apakah Anda yakin ingin menghapus buku ini?</p>
+        <button id="confirmDelete" class="red">Hapus</button>
+        <button id="cancelDelete" class="green">Batal</button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
